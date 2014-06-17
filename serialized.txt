@@ -1,0 +1,13 @@
+DROP TABLE reviewers;DROP TABLE subprogramchairs;CREATE TABLE subprogramchairs(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;CREATE TABLE reviewers(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE USER 'mike'@'localhost';
+CREATE DATABASE PR3Kv2;
+GRANT ALL PRIVILEGES ON *.* TO 'mike'@'localhost' WITH GRANT OPTION;
+CREATE TABLE subprogramchairs(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE reviewers(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE users(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE papers(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE conferences(`serialized_id` int(11) NOT NULL auto_increment,`object_name` varchar(255) default NULL,serialized_object blob, PRIMARY KEY  (`serialized_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DELETE FROM users WHERE True;DELETE FROM conferences WHERE True;DELETE FROM reviewers WHERE True;DELETE FROM subprogramchairs WHERE True;DELETE FROM papers WHERE True;
